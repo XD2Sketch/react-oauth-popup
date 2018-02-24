@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OauthPopup component renders correctly 1`] = `
+<div
+  onClick={[Function]}
+>
+   
+  <div>
+    coooooooool
+  </div>
+  <h2>
+    siiiiiiiick
+  </h2>
+  <h2>
+    leeegiiiiit
+  </h2>
+  <button>
+    Doooooope
+  </button>
+   
+</div>
+`;

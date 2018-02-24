@@ -1,0 +1,50 @@
+{
+  "name": "react-oauth-popup",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "flow": "flow check",
+    "test": "npm run flow && jest --silent",
+    "test-ci": "npm test && codecov",
+    "build": "NODE_ENV=production babel src --out-dir ./dist",
+    "prepublish": "npm run build",
+    "storybook": "start-storybook -p 6006"
+  },
+  "keywords": [
+    "react",
+    "oauth",
+    "popup"
+  ],
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage/",
+    "collectCoverageFrom": [
+      "src/*.js"
+    ]
+  },
+  "author": "Joseph Van Drunen",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.14",
+    "@storybook/addon-links": "^3.3.14",
+    "@storybook/addons": "^3.3.14",
+    "@storybook/react": "^3.3.14",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react-app": "^3.1.0",
+    "codecov": "^3.0.0",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.66.0",
+    "jest": "^22.3.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-test-renderer": "^16.2.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": ">16",
+    "react-dom": ">16"
+  }
+}
