@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OauthPopup returns code when present in popupurl 1`] = `
+<div
+  onClick={[Function]}
+>
+   
+  <div>
+    coooooooool
+  </div>
+  <h2>
+    siiiiiiiick
+  </h2>
+  <h2>
+    leeegiiiiit
+  </h2>
+  <button>
+    Doooooope
+  </button>
+   
+</div>
+`;
+
+exports[`OauthPopup returns code when present in popupurl 2`] = `
+<div
+  onClick={[Function]}
+>
+   
+  <div>
+    coooooooool
+  </div>
+  <h2>
+    siiiiiiiick
+  </h2>
+  <h2>
+    leeegiiiiit
+  </h2>
+  <button>
+    Doooooope
+  </button>
+   
+</div>
+`;
