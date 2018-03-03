@@ -51,6 +51,8 @@ export default class OauthPopup extends React.PureComponent<props> {
   }
 
   componentWillUnmount() {
-    this.externalWindow.close();
+    if (this.externalWindow) {
+      this.externalWindow.close();
+    }
   }
 }
