@@ -1,4 +1,4 @@
-## OAUTH-popups
+## oauth-popup
 
 [![CircleCI](https://circleci.com/gh/Ramshackle-Jamathon/oauth-popup.svg?style=svg)](https://circleci.com/gh/Ramshackle-Jamathon/oauth-popup)
 [![codecov](https://codecov.io/gh/Ramshackle-Jamathon/oauth-popup/branch/master/graph/badge.svg?token=BQlEFJDpcl)](https://codecov.io/gh/Ramshackle-Jamathon/oauth-popup)
@@ -24,13 +24,13 @@ npm install oauth-popups --save
 const onCode = (code) => console.log("wooooo a code", code);
 
 function Comp() {
-	return (
-        <OauthPopup
-            url="http://FriendlyMultiNationalTechConglomerate.com"
-            onCode={onCode}
-        >
-            <div>Click me to open a Popup</div>
-        </OauthPopup>
+  return (
+    <OauthPopup
+      url="http://FriendlyMultiNationalTechConglomerate.com"
+      onCode={onCode}
+    >
+      <div>Click me to open a Popup</div>
+    </OauthPopup>
 	);
 }
 ```
