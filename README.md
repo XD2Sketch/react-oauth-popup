@@ -1,4 +1,4 @@
-## oauth-popup
+## react-oauth-popup
 
 [![CircleCI](https://circleci.com/gh/Ramshackle-Jamathon/oauth-popup.svg?style=svg)](https://circleci.com/gh/Ramshackle-Jamathon/oauth-popup)
 [![codecov](https://codecov.io/gh/Ramshackle-Jamathon/oauth-popup/branch/master/graph/badge.svg?token=BQlEFJDpcl)](https://codecov.io/gh/Ramshackle-Jamathon/oauth-popup)
@@ -8,7 +8,7 @@ Oauth-Popups are some pretty nasty jams that don't fit well in React. This compo
 ### Install
 
 ```bash
-npm install oauth-popups --save
+npm install react-oauth-popup --save
 ```
 
 ### Props
