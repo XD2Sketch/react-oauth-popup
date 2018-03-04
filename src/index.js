@@ -19,11 +19,10 @@ export default class OauthPopup extends React.PureComponent<props> {
   };
 
   externalWindow: window;
-  gotCode = false;
+  codeCheck: IntervalID;
 
   createPopup = () => {
     const { url, title, width, height, onCode } = this.props;
-    this.gotCode = false;
     const left = window.screenX + (window.outerWidth - width) / 2;
     const top = window.screenY + (window.outerHeight - height) / 2.5;
     this.externalWindow = window.open(
@@ -32,18 +31,20 @@ export default class OauthPopup extends React.PureComponent<props> {
       `width=${width},height=${height},left=${left},top=${top}`
     );
 
-    setInterval(() => {
+    this.codeCheck = setInterval(() => {
       try {
         const params = new URL(this.externalWindow.location).searchParams;
         const code = params.get("code");
-        if (!code || this.gotCode) {
+        if (!code) {
           return;
         }
-        this.gotCode = true;
+        clearInterval(this.codeCheck);
         onCode(code);
         this.externalWindow.close();
       } catch (e) { }
     }, 20);
+
+    this.externalWindow.onbeforeunload = () => clearInterval(this.codeCheck)
   };
 
   render() {
