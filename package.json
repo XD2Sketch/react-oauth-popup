@@ -23,6 +23,14 @@
       "src/*.js"
     ]
   },
+  "homepage": "https://github.com/Ramshackle-Jamathon/react-oauth-popup",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ramshackle-Jamathon/react-oauth-popup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ramshackle-Jamathon/react-oauth-popup/issues"
+  },
   "author": "Joseph Van Drunen",
   "license": "MIT",
   "devDependencies": {
@@ -32,6 +40,7 @@
     "@storybook/react": "^3.3.14",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react-app": "^3.1.0",
     "codecov": "^3.0.0",
