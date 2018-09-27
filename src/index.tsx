@@ -18,6 +18,11 @@ const defaultProps = {
 //so we show the popup and then later deal with connecting it to the correct URL
 //the first token in the tokenNames decides when we have the token
 export function AuthPopup(url: string,tokenNames?:string[], title?: string, width?: number, height?: number) {
+    if(!width)
+        width = window.innerWidth - 10;
+    if(!height)
+        height = window.innerHeight - 10;
+
     const left = window.screenX + (window.outerWidth - width) / 2;
     const top = window.screenY + (window.outerHeight - height) / 2.5;
     
