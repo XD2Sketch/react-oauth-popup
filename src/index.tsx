@@ -56,6 +56,7 @@ export function AuthPopup(url: string,tokenNames?:string[], title?: string, widt
                 if (!code) {
                     return;
                 }
+                debugger;
 
                 const codeArray = [code];
                 for(let i=1;i<tokenNames.length;i++){
@@ -65,16 +66,21 @@ export function AuthPopup(url: string,tokenNames?:string[], title?: string, widt
                 resolve(codeArray);
                 externalWindow.close();
             } catch (e) {
+                
                 //we will get here for security violation till we get redirected back to us
                 //reject(e);
                 //throw e;
             }
     },2000);
+
+    /*
+        not use and for futre this throws error for EDGE
          externalWindow.onbeforeunload = () => {
             //debugger;
             //we handle on close. no need to clear here. This gets triggered when we navigate which is an issue
             //clearInterval(codeCheck);
         }
+    */
     });
 
     return {
