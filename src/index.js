@@ -6,12 +6,14 @@ type props = {
   height: number,
   url: string,
   title: string,
-  onCode: (code: string) => *,
+  onClose: () => *,
+  onCode: (code: string, params: *) => *,
   children?: React.Node,
 }
 
 export default class OauthPopup extends React.PureComponent<props> {
   static defaultProps = {
+    onClose: () => {},
     width: 500,
     height: 500,
     url: "",
@@ -39,12 +41,15 @@ export default class OauthPopup extends React.PureComponent<props> {
           return;
         }
         clearInterval(this.codeCheck);
-        onCode(code);
+        onCode(code, params);
         this.externalWindow.close();
       } catch (e) { }
     }, 20);
 
-    this.externalWindow.onbeforeunload = () => clearInterval(this.codeCheck)
+    this.externalWindow.onbeforeunload = () => {
+      this.props.onClose();
+      clearInterval(this.codeCheck);
+    }
   };
 
   render() {
