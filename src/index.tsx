@@ -17,22 +17,24 @@ const defaultProps = {
 //popups are evil and needs to be called just after a button is clicked or something. 
 //so we show the popup and then later deal with connecting it to the correct URL
 //the first token in the tokenNames decides when we have the token
-export function AuthPopup(url: string,tokenNames?:string[], title?: string, width?: number, height?: number) {
-    if(!width)
-        width = window.innerWidth - 10;
-    if(!height)
-        height = window.innerHeight - 10;
+export function AuthPopup(url: string,tokenNames?:string[],  options?:{title?: string, width?: number, height?: number, existingWindow?:Window}) {
+    
+    options = options ||{};
+    if(!options.width)
+        options.width = window.innerWidth - 10;
+    if(!options.height)
+        options.height = window.innerHeight - 10;
 
-    const left = window.screenX + (window.outerWidth - width) / 2;
-    const top = window.screenY + (window.outerHeight - height) / 2.5;
+    const left = window.screenX + (window.outerWidth - options.width) / 2;
+    const top = window.screenY + (window.outerHeight - options.height) / 2.5;
     
     if(!tokenNames || tokenNames.length ==0)
         tokenNames=['code'];
 
-    const externalWindow: any = window.open(
+    const externalWindow: any = (options && options.existingWindow) || window.open(
         url,
-        title,
-        `width=${width || defaultProps.width},height=${height || defaultProps.height},left=${left},top=${top}`
+        (options && options.title)||'Authenticating',
+        `width=${options.width || defaultProps.width},height=${options.height || defaultProps.height},left=${left},top=${top}`
     );
     if (null == externalWindow)
         throw 'Failed to open poup';
@@ -67,6 +69,7 @@ export function AuthPopup(url: string,tokenNames?:string[], title?: string, widt
                 externalWindow.close();
             } catch (e) {
                 
+                console.debug('window is not yet redirected');
                 //we will get here for security violation till we get redirected back to us
                 //reject(e);
                 //throw e;
@@ -87,6 +90,7 @@ export function AuthPopup(url: string,tokenNames?:string[], title?: string, widt
         codePromise,
 
         navigate: (url) => {
+            
             externalWindow.location = url;
         },
 
@@ -109,7 +113,7 @@ export default class OauthPopup extends React.PureComponent<props> {
   createPopup = () => {
     const { url, title, width, height, onCode } = this.props;
 
-    this.auth = AuthPopup(url,null, title, width, height);
+    this.auth = AuthPopup(url,null, {title, width, height});
     this.auth.codePromise.then(code => onCode(code));
 
 
