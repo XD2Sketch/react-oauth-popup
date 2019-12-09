@@ -21,44 +21,61 @@ export default class OauthPopup extends React.PureComponent<props> {
   };
 
   externalWindow: window;
-  codeCheck: IntervalID;
+  animationFrameId: AnimationFrameID;
 
   createPopup = () => {
-    const { url, title, width, height, onCode } = this.props;
+    const { url, title, width, height } = this.props;
     const left = window.screenX + (window.outerWidth - width) / 2;
     const top = window.screenY + (window.outerHeight - height) / 2.5;
+
     this.externalWindow = window.open(
       url,
       title,
       `width=${width},height=${height},left=${left},top=${top}`
     );
-
-    this.codeCheck = setInterval(() => {
-      try {
-        const params = new URL(this.externalWindow.location).searchParams;
-        const code = params.get("code");
-        if (!code) {
-          return;
-        }
-        clearInterval(this.codeCheck);
-        onCode(code, params);
-        this.externalWindow.close();
-      } catch (e) { }
-    }, 20);
-
+    this.animationFrameId = requestAnimationFrame(this.tick);
     this.externalWindow.onbeforeunload = () => {
-      this.props.onClose();
-      clearInterval(this.codeCheck);
+      this.closeExternalWindow
     }
   };
 
-  render() {
-    return <div onClick={this.createPopup}> {this.props.children} </div>;
-  }
+  tick = () => {
+    const { onCode } = this.props;
+    try {
+      const params = new URL(this.externalWindow.location).searchParams;
+      const code = params.get("code");
+      if (code) {
+        onCode(code, params);
+        this.closeExternalWindow()
+      }
+    } catch (e) {
+    }
+    finally {
+      if (!this.externalWindow.closed) {
+        window.requestAnimationFrame(this.tick);
+      }
+    }
+  }  
 
   componentWillUnmount() {
-    if (this.externalWindow) {
+    this.closeExternalWindow()
+  }
+
+  closeExternalWindow = () => {
+    const { onClose } = this.props
+    if (this.externalWindow && !this.externalWindow.closed) {
+      if (onClose) {
+        onClose();
+      }
       this.externalWindow.close();
     }
+
+    if (this.animationFrameId) {
+      cancelAnimationFrame(this.animationFrameId)
+    }
+  }
+
+  render() {
+    return <div onClick={this.createPopup}> {this.props.children} </div>;
   }
 }
