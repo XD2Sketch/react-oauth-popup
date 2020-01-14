@@ -41,15 +41,19 @@ export default class OauthPopup extends React.PureComponent<props> {
           return;
         }
         clearInterval(this.codeCheck);
+        clearInterval(this.closeCheck);
         onCode(code, params);
         this.externalWindow.close();
       } catch (e) { }
     }, 20);
 
-    this.externalWindow.onbeforeunload = () => {
-      this.props.onClose();
-      clearInterval(this.codeCheck);
-    }
+    this.closeCheck = setInterval(() => {
+      if (this.externalWindow.closed){
+        this.props.onClose();
+        clearInterval(this.codeCheck);
+        clearInterval(this.closeCheck);
+      }
+    },20);
   };
 
   render() {
