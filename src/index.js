@@ -35,7 +35,7 @@ export default class OauthPopup extends React.PureComponent<props> {
     );
     this.animationFrameId = requestAnimationFrame(this.tick);
     this.externalWindow.onbeforeunload = () => {
-      this.closeExternalWindow
+      this.closeExternalWindow()
     }
   };
 
