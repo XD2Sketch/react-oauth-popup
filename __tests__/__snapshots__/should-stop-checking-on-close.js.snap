@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OauthPopup stops checking for code when popup closes 1`] = `
+exports[`OauthPopup OauthPopup stops checking for code when popup closes 1`] = `
 <div
   onClick={[Function]}
 >
@@ -21,7 +21,7 @@ exports[`OauthPopup stops checking for code when popup closes 1`] = `
 </div>
 `;
 
-exports[`OauthPopup stops checking for code when popup closes 2`] = `
+exports[`OauthPopup OauthPopup stops checking for code when popup closes 2`] = `
 <div
   onClick={[Function]}
 >
