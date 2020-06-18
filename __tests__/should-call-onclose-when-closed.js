@@ -3,19 +3,14 @@ import renderer from 'react-test-renderer';
 import OauthPopup from "../src/index.js";
 
 test('OauthPopup calls onClose when popup closed', done => {
+    const mockOnClose =  jest.fn();
     global.open = jest.fn().mockReturnValue({
         location: "http://www.google.com",
-        close: function(){
-            this.onbeforeunload()
-        }
+        close: mockOnClose
     });
-    const mockOnClose =  jest.fn();
     const component = renderer.create(
         <OauthPopup
-            onClose={() => {
-                mockOnClose()
-                done()
-            }}
+            onClose={done}
         >
             <div>coooooooool</div>
             <h2>siiiiiiiick</h2>
