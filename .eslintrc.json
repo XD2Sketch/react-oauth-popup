@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+      "jest": true,
+      "browser": true
+  },
+  "rules": {
+      "no-underscore-dangle": "off",
+      "array-bracket-newline": [
+          "error",
+          "consistent"
+      ]
+  }
+}

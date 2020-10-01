@@ -4,7 +4,6 @@ exports[`OauthPopup does not return a code when non is present 1`] = `
 <div
   onClick={[Function]}
 >
-   
   <div>
     coooooooool
   </div>
@@ -17,7 +16,6 @@ exports[`OauthPopup does not return a code when non is present 1`] = `
   <button>
     Doooooope
   </button>
-   
 </div>
 `;
 
@@ -25,7 +23,6 @@ exports[`OauthPopup does not return a code when non is present 2`] = `
 <div
   onClick={[Function]}
 >
-   
   <div>
     coooooooool
   </div>
@@ -38,6 +35,5 @@ exports[`OauthPopup does not return a code when non is present 2`] = `
   <button>
     Doooooope
   </button>
-   
 </div>
 `;
