@@ -4,7 +4,6 @@ exports[`OauthPopup closes popup on unmount 1`] = `
 <div
   onClick={[Function]}
 >
-   
   <div>
     coooooooool
   </div>
@@ -17,6 +16,5 @@ exports[`OauthPopup closes popup on unmount 1`] = `
   <button>
     Doooooope
   </button>
-   
 </div>
 `;

@@ -4,7 +4,6 @@ exports[`OauthPopup component renders correctly 1`] = `
 <div
   onClick={[Function]}
 >
-   
   <div>
     coooooooool
   </div>
@@ -17,6 +16,5 @@ exports[`OauthPopup component renders correctly 1`] = `
   <button>
     Doooooope
   </button>
-   
 </div>
 `;
