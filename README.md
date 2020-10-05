@@ -1,14 +1,19 @@
 ## react-oauth-popup
 
-[![CircleCI](https://circleci.com/gh/Ramshackle-Jamathon/react-oauth-popup.svg?style=svg)](https://circleci.com/gh/Ramshackle-Jamathon/react-oauth-popup)
-[![codecov](https://codecov.io/gh/Ramshackle-Jamathon/react-oauth-popup/branch/master/graph/badge.svg)](https://codecov.io/gh/Ramshackle-Jamathon/react-oauth-popup)
+![Node.js CI](https://github.com/kgoedecke/react-oauth-popup/workflows/Node.js%20CI/badge.svg)
 
 Oauth-Popups are some pretty nasty jams that don't fit well in React. This component allows you declare an oauth-popup inline with your components and handles the nasty window navigation for you.
 
 ### Install
 
+NPM:
 ```bash
 npm install react-oauth-popup --save
+```
+
+Yarn:
+```bash
+yarn add react-oauth-popup
 ```
 
 ### Props
