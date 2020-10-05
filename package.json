@@ -1,7 +1,7 @@
 {
   "name": "react-simple-oauth-popup",
   "description": "Open a simple popup to authenticate via oAuth",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
@@ -16,13 +16,6 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-push": "branch-name-lint"
     }
-  },
-  "jest": {
-    "collectCoverage": true,
-    "coverageDirectory": "./coverage/",
-    "collectCoverageFrom": [
-      "src/*.js"
-    ]
   },
   "license": "MIT",
   "dependencies": {},
