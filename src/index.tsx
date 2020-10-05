@@ -27,10 +27,10 @@ const createPopup = ({
 };
 
 const OauthPopup: React.FC<IPopupProps> = ({
+  title = '',
+  width = 500,
+  height = 500,
   url,
-  title,
-  width,
-  height,
   children,
   onCode,
   onClose,
