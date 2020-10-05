@@ -15,5 +15,7 @@ jobs:
           node-version: 12
       - name: Install dependencies
         run: yarn install --frozen-lock-file
-      - name: Publish to GH registry
+      - name: Publish to NPM registry
         run: yarn publish
+        env:
+          NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
