@@ -8,7 +8,7 @@
     "test": "jest",
     "lint": "eslint ./src",
     "lint:branch-name": "branch-name-lint",
-    "build": "babel -d ./dist ./src --copy-files --source-maps --extensions \".ts,.tsx\"",
+    "build": "babel -d ./dist ./src --copy-files --source-maps --extensions \".ts,.tsx\" && tsc --emitDeclarationOnly",
     "prepublishOnly": "yarn build",
     "release": "standard-version"
   },
