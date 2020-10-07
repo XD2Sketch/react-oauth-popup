@@ -2,7 +2,9 @@
 
 ![Node.js CI](https://github.com/kgoedecke/react-oauth-popup/workflows/Node.js%20CI/badge.svg)
 
-Oauth-Popups are some pretty nasty jams that don't fit well in React. This component allows you declare an oauth-popup inline with your components and handles the nasty window navigation for you.
+OAuth-Popups are some pretty nasty jams that don't fit well in React. This component allows you declare an oauth-popup inline with your components and handles the nasty window navigation for you.
+
+Please note: This component currently only supports OAuth Authorization Code grant type (see: [OAuth2 Grant Types](https://oauth.net/2/grant-types/) [OAuth2 Simplified](https://aaronparecki.com/oauth-2-simplified/#authorization))
 
 ### Install
 
