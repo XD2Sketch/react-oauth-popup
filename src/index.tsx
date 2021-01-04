@@ -49,7 +49,7 @@ const OauthPopup: React.FC<IPopupProps> = ({
   };
 
   useEffect(() => {
-    if (!externalWindow.closed) {
+    if (!externalWindow?.closed) {
       intervalRef.current = window.setInterval(() => {
         try {
           const currentUrl = externalWindow.location.href;
