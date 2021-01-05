@@ -49,7 +49,7 @@ const OauthPopup: React.FC<IPopupProps> = ({
   };
 
   useEffect(() => {
-    if (!externalWindow?.closed) {
+    if (externalWindow) {
       intervalRef.current = window.setInterval(() => {
         try {
           const currentUrl = externalWindow.location.href;
@@ -74,7 +74,7 @@ const OauthPopup: React.FC<IPopupProps> = ({
       if (externalWindow) externalWindow.close();
       if (onClose) onClose();
     };
-  });
+  },[externalWindow]);
 
   return (
     // eslint-disable-next-line
