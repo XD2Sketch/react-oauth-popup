@@ -28,7 +28,9 @@ test('OauthPopup closes popup on unmount', () => {
   });
   popup = component.toJSON();
   expect(global.open.mock.calls.length).toBe(1);
-  component.unmount();
+  act(() => {
+    component.unmount();
+  });
   expect(close.mock.calls.length).toBe(1);
   expect(global.open.mock.calls.length).toBe(1);
 });
