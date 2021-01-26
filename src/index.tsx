@@ -74,7 +74,7 @@ const OauthPopup: React.FC<IPopupProps> = ({
       if (externalWindow) externalWindow.close();
       if (onClose) onClose();
     };
-  });
+  }, [externalWindow]);
 
   return (
     // eslint-disable-next-line
