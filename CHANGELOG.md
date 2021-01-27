@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/kgoedecke/react-oauth-popup/compare/v1.0.2...v1.0.3) (2021-01-27)
+
+
+### Bug Fixes
+
+* prevent infinite onClose call ([#32](https://github.com/kgoedecke/react-oauth-popup/issues/32)) ([f8cc46a](https://github.com/kgoedecke/react-oauth-popup/commit/f8cc46aadc5c62813c6b358acb47835bc6f6e152))
+* wrap unmount in act to mimic browser behavior ([87d4eea](https://github.com/kgoedecke/react-oauth-popup/commit/87d4eeaeadca33b00568bfd21a96c2e25dbcb6b7))
+
 ### [1.0.2](https://github.com/kgoedecke/react-oauth-popup/compare/v1.0.1...v1.0.2) (2020-10-07)
 
 
