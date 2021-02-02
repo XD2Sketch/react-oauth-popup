@@ -18,6 +18,13 @@
       "pre-push": "branch-name-lint"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XD2Sketch/react-oauth-popup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XD2Sketch/react-oauth-popup/issues"
+  },
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
