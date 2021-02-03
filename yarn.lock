@@ -502,12 +502,7 @@
     regenerator-runtime "^0.13.4"
     v8flags "^3.1.1"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.10.4", "@babel/parser@^7.11.5", "@babel/parser@^7.12.10", "@babel/parser@^7.12.11", "@babel/parser@^7.12.7", "@babel/parser@^7.7.0":
-  version "7.12.13"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.13.tgz#3ee7be4131fe657ba9143d5c5b3a9f253fdb75e9"
-  integrity sha512-z7n7ybOUzaRc3wwqLpAX8UFIXsrVXUJhtNGBwAnLz6d1KUapqyq7ad2La8gZ6CXhHmGAIL32cop8Tst4/PNWLw==
-
-"@babel/parser@^7.12.13":
+"@babel/parser@^7.1.0", "@babel/parser@^7.10.4", "@babel/parser@^7.11.5", "@babel/parser@^7.12.10", "@babel/parser@^7.12.11", "@babel/parser@^7.12.13", "@babel/parser@^7.12.7", "@babel/parser@^7.7.0":
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.13.tgz#3ee7be4131fe657ba9143d5c5b3a9f253fdb75e9"
   integrity sha512-z7n7ybOUzaRc3wwqLpAX8UFIXsrVXUJhtNGBwAnLz6d1KUapqyq7ad2La8gZ6CXhHmGAIL32cop8Tst4/PNWLw==
@@ -595,11 +590,11 @@
     "@babel/plugin-syntax-optional-catch-binding" "^7.8.0"
 
 "@babel/plugin-proposal-optional-chaining@^7.12.7":
-  version "7.12.7"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.12.7.tgz#e02f0ea1b5dc59d401ec16fb824679f683d3303c"
-  integrity sha512-4ovylXZ0PWmwoOvhU2vhnzVNnm88/Sm9nx7V8BPgMvAzn5zDou3/Awy0EjglyubVHasJj+XCEkr/r1X3P5elCA==
+  version "7.12.13"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.12.13.tgz#63a7d805bc8ce626f3234ee5421a2a7fb23f66d9"
+  integrity sha512-0ZwjGfTcnZqyV3y9DSD1Yk3ebp+sIUpT2YDqP8hovzaNZnQq2Kd7PEqa6iOIUDBXBt7Jl3P7YAcEIL5Pz8u09Q==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.10.4"
+    "@babel/helper-plugin-utils" "^7.12.13"
     "@babel/helper-skip-transparent-expression-wrappers" "^7.12.1"
     "@babel/plugin-syntax-optional-chaining" "^7.8.0"
 
