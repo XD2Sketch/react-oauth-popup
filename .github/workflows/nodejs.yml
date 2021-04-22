@@ -34,7 +34,7 @@ jobs:
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
       - name: Dependabot Auto Merge
-        uses: actions/github-script@v3
+        uses: actions/github-script@v4.0.1
         with:
           github-token: ${{secrets.github_token}}
           script: |
