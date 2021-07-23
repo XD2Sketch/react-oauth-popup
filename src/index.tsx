@@ -60,6 +60,7 @@ const OauthPopup: React.FC<IPopupProps> = ({
           }
           onCode(code, params);
           clearTimer();
+          externalWindow.close();
         } catch (error) {
           // eslint-ignore-line
         } finally {
