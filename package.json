@@ -10,6 +10,7 @@
     "lint:branch-name": "branch-name-lint",
     "build": "babel -d ./dist ./src --copy-files --source-maps --extensions \".ts,.tsx\" && tsc --emitDeclarationOnly",
     "prepublishOnly": "yarn build",
+    "postrelease": "git push --follow-tags --no-verify",
     "release": "standard-version"
   },
   "husky": {
