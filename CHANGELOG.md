@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/XD2Sketch/react-oauth-popup/compare/v1.0.3...v1.0.4) (2021-07-23)
+
+
+### Bug Fixes
+
+* close popup after receiving code ([d261400](https://github.com/XD2Sketch/react-oauth-popup/commit/d2614005984dba2adf59ea60c64830e1ff4b6459))
+
 ### [1.0.3](https://github.com/kgoedecke/react-oauth-popup/compare/v1.0.2...v1.0.3) (2021-01-27)
 
 
