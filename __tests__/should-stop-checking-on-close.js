@@ -2,7 +2,7 @@ import React from 'react';
 import renderer, { act } from 'react-test-renderer';
 import OauthPopup from '../src/index';
 
-jest.useFakeTimers();
+jest.useFakeTimers('legacy');
 
 test('OAuthPopup stops checking for code when popup closes', () => {
   let component;
