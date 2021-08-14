@@ -2,7 +2,7 @@ import React from 'react';
 import renderer, { act } from 'react-test-renderer';
 import OauthPopup from '../src/index';
 
-test('OauthPopup calls onClose when popup closed', (done) => {
+test('OauthPopup calls onClose when popup closed', () => {
   let component;
   const mockOnClose = jest.fn();
   global.open = jest.fn().mockReturnValue({
@@ -14,7 +14,7 @@ test('OauthPopup calls onClose when popup closed', (done) => {
   act(() => {
     component = renderer.create(
             <OauthPopup
-                onClose={done}
+                onClose={() => {}}
             >
                 <div>coooooooool</div>
                 <h2>siiiiiiiick</h2>
