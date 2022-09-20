@@ -7,7 +7,8 @@ type IWindowProps = {
   height: number;
 };
 
-type IPopupProps = IWindowProps & {
+type IPopupProps = Partial<Omit<IWindowProps, 'url'>> & {
+  url: string;
   onClose: () => void;
   onCode: (code: string, params: URLSearchParams) => void;
   children: React.ReactNode;
